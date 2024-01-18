@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { Suspense } from 'react'
 import Image from 'next/image'
 import CartWidget from './cart-widget'
 import SearchForm from './searh-form'
@@ -11,7 +11,9 @@ export default function Header() {
         <Link href="/" className="text-2xl font-extrabold text-white">
           DevStore
         </Link>
-        <SearchForm />
+        <Suspense fallback={null}>
+          <SearchForm />
+        </Suspense>
       </div>
       <div className="flex items-center gap-4">
         <CartWidget />
