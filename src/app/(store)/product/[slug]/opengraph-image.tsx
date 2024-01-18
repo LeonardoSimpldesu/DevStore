@@ -3,7 +3,6 @@ import { Product } from '@/data/types/products'
 import { env } from '@/env'
 import colors from 'tailwindcss/colors'
 import { ImageResponse } from 'next/og'
-import Image from 'next/image'
 
 // Route segment config
 export const runtime = 'edge'
